@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <filter id="softShadow" x="-15%" y="-15%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dx="0" dy="4" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.08" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+
+  <!-- Top accent -->
+  <rect x="0" y="0" width="1280" height="8" fill="#8B0000"/>
+
+  <!-- Main Thank You title -->
+  <text x="640" y="320" text-anchor="middle" font-size="72" font-weight="bold" fill="#8B0000" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{THANK_YOU}}</tspan>
+  </text>
+
+  <!-- Gold accent line -->
+  <rect x="520" y="360" width="240" height="4" fill="#C9B037"/>
+
+  <!-- Contact information card -->
+  <rect x="400" y="400" width="480" height="120" rx="12" fill="#F5F5F5" stroke="#E0E0E0" stroke-width="1" filter="url(#softShadow)"/>
+  <text x="640" y="472" text-anchor="middle" font-size="18" fill="#333333" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{CONTACT}}</tspan>
+  </text>
+
+  <!-- Bottom institution name -->
+  <text x="640" y="648" text-anchor="middle" font-size="16" fill="#666666" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{INSTITUTION}}</tspan>
+  </text>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="712" width="1280" height="8" fill="#8B0000"/>
+</svg>

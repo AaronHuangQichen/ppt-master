@@ -10,6 +10,18 @@ A creative, versatile-style SVG design executor. Suitable for product introducti
 
 ---
 
+## Modern Aesthetic Design Principles
+
+Follow these aesthetic guidelines from [shared-standards.md](shared-standards.md):
+
+1. **Spacing**: Follow the 8px grid system. Use consistent spacing: title to content 48-64px, card padding 24-32px, card gap 20-24px.
+2. **Border radius**: Standardize: small elements 8px, cards 12px, large panels 16px. Prefer rounded corners over sharp corners.
+3. **Typography**: Clear hierarchy with larger size differences: title 44-56px, heading 28px, body 16px. Line height: title 1.2, heading 1.3, body 1.6.
+4. **Visual depth**: Use soft shadows (`filter="url(#softShadow)"`) on cards instead of heavy borders. Keep shadow opacity low (0.06-0.12).
+5. **Content density**: Less content per slide = better design. Target content coverage < 70% of slide area for better readability.
+
+---
+
 ## General-specific Layout Techniques
 
 ### 1. Flexible and Varied Layouts
@@ -19,9 +31,9 @@ The General style is not confined to fixed templates; layouts can be freely chos
 | Layout | Use Case | Layout Details (1280x720) |
 |--------|----------|--------------------------|
 | Full-image background + text overlay | Covers, emotional pages | `<image>` fills canvas + semi-transparent overlay + centered title |
-| Left-right split (image-text mix) | Feature introductions, comparisons | Left x=40,w=580 / Right x=660,w=580 |
-| Three-column cards | Feature lists, team introductions | x=40,450,860 each w=380, equal-height cards |
-| Top-bottom split | Timelines, process flows | Top area: title+description h=250 / Bottom area: charts+content h=420 |
+| Left-right split (image-text mix) | Feature introductions, comparisons | Left x=80,w=560 / Right x=640,w=560 (adjusted for increased margins) |
+| Three-column cards | Feature lists, team introductions | x=80, 453, 826 each w=347, equal-height cards |
+| Top-bottom split | Timelines, process flows | Top area: title+description h=240 / Bottom area: charts+content h=410 |
 | Center-radiating | Core concepts, ecosystem diagrams | Center element + 4-6 surrounding nodes, lines pointing to center |
 | Waterfall / Z-pattern | Storytelling, case studies | Content blocks alternate left-right, guiding the eye in a Z-pattern |
 
@@ -36,7 +48,7 @@ The General style is not confined to fixed templates; layouts can be freely chos
 | Element | Usage | Notes |
 |---------|-------|-------|
 | Gradient blocks | Background zones, title backing | Use `<linearGradient>` / `<radialGradient>`, limit to 2-3 colors |
-| Rounded rectangle cards | Content containers, feature modules | `rx="12"` with light shadow (simulate with lighter rect) |
+| Rounded rectangle cards | Content containers, feature modules | `rx="12"` with soft shadow (flood-opacity 0.08) |
 | Icon accents | List item prefixes, feature markers | Use `data-icon` placeholders, size 32-48px |
 | Numbered circles | Step flows, ranked lists | `<circle>` + centered `<text>`, theme color fill |
 | Divider lines | Content separation | `<line>` or `<rect height="2">`, opacity 0.2-0.3 |
@@ -114,8 +126,18 @@ Duration: 2 minutes
 
 ---
 
-## Self-check Supplement (General-specific)
+## Self-check & Multimodal Verification (General-specific)
 
+After generating all SVG pages:
+
+**Mandatory multimodal check**: Open SVG preview and verify:
+- [ ] All text content matches the design specification (no missing words, no misspellings)
+- [ ] No overlapping elements, all elements properly aligned to 8px grid
+- [ ] Colors match the specified palette from design spec
+- [ ] Content coverage is less than 70% (not overcrowded)
+- [ ] Cards have soft shadows instead of heavy borders
+
+**General-specific self-check**:
 - [ ] Visual rhythm is reasonable: data-dense pages alternate with breathing pages
 - [ ] Decorative elements are moderate: serving content, not overshadowing it
 - [ ] Image-text ratio is appropriate: not just text walls, visual highlights present

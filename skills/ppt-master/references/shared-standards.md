@@ -80,7 +80,81 @@ The following features are **absolutely forbidden** when generating SVGs — PPT
 
 ---
 
-## 5. Post-processing Pipeline (3 Steps)
+## 5. Design Aesthetic Standards
+
+### 5.1 Design Principles (Four Basic Principles)
+
+Follow these core design principles for professional results:
+
+| Principle | Description |
+|-----------|-------------|
+| **Proximity** | Group related content together; put space between unrelated groups |
+| **Contrast** | Make contrasting elements clearly different — larger/smaller, bolder/lighter, different color |
+| **Repetition** | Repeat visual elements (colors, fonts, spacing) consistently throughout the presentation |
+| **Alignment** | Align every element with something else; no "floating" elements off the grid |
+
+### 5.2 Spacing Standards (8px Grid)
+
+All positions and dimensions should be **multiples of 8** for consistent alignment.
+
+Standard spacing values:
+
+| Element Relationship | Recommended Spacing |
+|---------------------|---------------------|
+| Title to content below | 48px — 64px |
+| Section to section | 60px — 80px |
+| Card internal padding | 24px — 32px |
+| Gap between adjacent cards | 20px — 24px |
+| Icon to adjacent text | 12px — 16px |
+| Bullet icon to text | 8px — 12px |
+| Paragraph line spacing | proportional to font size (see below) |
+
+### 5.3 Border Radius Standards
+
+Use consistent border radius for a modern look:
+
+| Element Type | Recommended Radius |
+|--------------|-------------------|
+| Small components / buttons | 8px |
+| Medium cards / panels | 12px |
+| Large panels / containers | 16px |
+| Full-width bars / headers | 0px — 4px |
+| Pill buttons / tags | 999px (fully rounded) |
+
+**Guideline**: Prefer rounded corners over sharp corners for a modern, friendly feel. Use smaller radius for smaller elements.
+
+### 5.4 Typography Standards
+
+**Line height by text type**:
+| Text Type | Line Height |
+|-----------|-------------|
+| Title / Large heading | 1.2 |
+| Section heading | 1.3 |
+| Body text | 1.6 |
+| Caption / footnote | 1.5 |
+
+**Font weight by text type**:
+| Text Type | Font Weight |
+|-----------|-------------|
+| title_large | Bold (700) |
+| title | Bold (700) |
+| heading | Semi-bold (600) |
+| subheading | Semi-bold (600) |
+| body | Regular (400) |
+| body_small | Regular (400) |
+| caption | Regular (400) |
+| footnote | Regular (400) |
+| emphasis | Semi-bold (600) |
+
+### 5.5 Border & Separation Guidelines
+
+- Prefer **soft shadows** over heavy borders for separating cards from background
+- If borders are used, use light gray (`#E5E7EB`) with 1px — 2px thickness
+- Never use dark thick borders — they create visual clutter
+
+---
+
+## 6. Post-processing Pipeline (3 Steps)
 
 Must be executed in order — skipping or adding extra flags is FORBIDDEN:
 
@@ -105,7 +179,7 @@ python3 scripts/svg_to_pptx.py <project_path> -s final
 
 ---
 
-## 6. Shadow & Overlay Techniques
+## 7. Shadow & Overlay Techniques
 
 > `<mask>` elements and `<image opacity="...">` are banned. Always use stacked `<rect>` or gradient overlays instead (see §2).
 
@@ -244,7 +318,7 @@ Best for: slides needing strong visual brand identity.
 
 ---
 
-## 7. Project Directory Structure
+## 8. Project Directory Structure
 
 ```
 project/

@@ -191,6 +191,71 @@ DESIGN_COLORS = {
         'text_muted': '#555555',
         'background': '#FFFFFF',
         'background_alt': '#FFF8E1'
+    },
+    'minimal': {
+        'name': 'Minimal Modern',
+        'primary': '#111827',
+        'secondary': '#4B5563',
+        'accent': '#3B82F6',
+        'success': '#10B981',
+        'warning': '#EF4444',
+        'text_dark': '#111827',
+        'text': '#374151',
+        'text_muted': '#6B7280',
+        'text_light_gray': '#9CA3AF',
+        'border': '#E5E7EB',
+        'text_light': '#FFFFFF',
+        'background': '#FFFFFF',
+        'background_alt': '#F9FAFB'
+    },
+    'corporate': {
+        'name': 'Corporate Gradient',
+        'primary': '#0F172A',
+        'secondary': '#1E293B',
+        'accent': '#6366F1',
+        'accent2': '#8B5CF6',
+        'success': '#10B981',
+        'warning': '#EF4444',
+        'text_dark': '#0F172A',
+        'text': '#334155',
+        'text_muted': '#64748B',
+        'text_light_gray': '#94A3B8',
+        'border': '#E2E8F0',
+        'text_light': '#FFFFFF',
+        'background': '#FFFFFF',
+        'background_alt': '#F8FAFC'
+    },
+    'sjtu_med': {
+        'name': 'SJTU Medicine Academic',
+        'primary': '#8B0000',
+        'secondary': '#1E3A5F',
+        'accent': '#C9B037',
+        'success': '#2E7D32',
+        'warning': '#D32F2F',
+        'text_dark': '#1A1A1A',
+        'text': '#333333',
+        'text_muted': '#666666',
+        'text_light_gray': '#999999',
+        'border': '#E0E0E0',
+        'text_light': '#FFFFFF',
+        'background': '#FFFFFF',
+        'background_alt': '#F5F5F5'
+    },
+    'nature_medical': {
+        'name': 'Nature Medical',
+        'primary': '#065F46',
+        'secondary': '#10B981',
+        'accent': '#F59E0B',
+        'success': '#059669',
+        'warning': '#DC2626',
+        'text_dark': '#14532D',
+        'text': '#374151',
+        'text_muted': '#6B7280',
+        'text_light_gray': '#9CA3AF',
+        'border': '#D1FAE5',
+        'text_light': '#FFFFFF',
+        'background': '#FFFFFF',
+        'background_alt': '#F8FAF9'
     }
 }
 
@@ -293,20 +358,20 @@ INDUSTRY_COLORS = {
 
 FONTS = {
     'system_ui': "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
-    'sans_serif': "'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+    'sans_serif': "SF Pro Display\", -apple-system, BlinkMacSystemFont, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", \"Segoe UI\", sans-serif",
     'monospace': "'SF Mono', Monaco, Consolas, 'Liberation Mono', monospace"
 }
 
 FONT_SIZES = {
-    'title_large': 48,
-    'title': 36,
-    'title_small': 28,
-    'heading': 24,
-    'subheading': 20,
-    'body': 18,
-    'body_small': 16,
-    'caption': 14,
-    'footnote': 12
+    'title_large': 56,
+    'title': 44,
+    'title_small': 32,
+    'heading': 28,
+    'subheading': 24,
+    'body': 16,
+    'body_small': 14,
+    'caption': 12,
+    'footnote': 10
 }
 
 
@@ -316,28 +381,28 @@ FONT_SIZES = {
 
 LAYOUT_MARGINS = {
     'ppt169': {
-        'top': 60,
-        'right': 60,
-        'bottom': 60,
-        'left': 60,
-        'content_width': 1160,
-        'content_height': 600
+        'top': 70,
+        'right': 80,
+        'bottom': 70,
+        'left': 80,
+        'content_width': 1120,
+        'content_height': 580
     },
     'xiaohongshu': {
-        'top': 80,
-        'right': 60,
-        'bottom': 80,
-        'left': 60,
-        'content_width': 1122,
-        'content_height': 1500
+        'top': 100,
+        'right': 80,
+        'bottom': 100,
+        'left': 80,
+        'content_width': 1082,
+        'content_height': 1460
     },
     'moments': {
-        'top': 60,
-        'right': 60,
-        'bottom': 60,
-        'left': 60,
-        'content_width': 960,
-        'content_height': 960
+        'top': 80,
+        'right': 80,
+        'bottom': 80,
+        'left': 80,
+        'content_width': 920,
+        'content_height': 920
     }
 }
 

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Background - off white / cream -->
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Subtle accent circle top-left -->
+  <circle cx="120" cy="120" r="40" fill="{{ACCENT_COLOR}}" fill-opacity="0.15"/>
+
+  <!-- Main title centered -->
+  <text x="640" y="300" text-anchor="middle" font-size="52" font-weight="300" fill="#4a4a48" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{TITLE}}</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="640" y="360" text-anchor="middle" font-size="20" fill="#868e96" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{SUBTITLE}}</tspan>
+  </text>
+
+  <!-- Accent horizontal line -->
+  <rect x="520" y="400" width="240" height="2" fill="{{ACCENT_COLOR}}" fill-opacity="0.3"/>
+
+  <!-- Author info at bottom -->
+  <text x="640" y="580" text-anchor="middle" font-size="16" font-weight="300" fill="#6c757d" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{AUTHOR}}</tspan>
+  </text>
+  <text x="640" y="616" text-anchor="middle" font-size="14" fill="#adb5bd" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{DATE}}</tspan>
+  </text>
+
+  <!-- Subtle accent circle bottom-right -->
+  <circle cx="1160" cy="600" r="32" fill="{{ACCENT_COLOR}}" fill-opacity="0.15"/>
+</svg>

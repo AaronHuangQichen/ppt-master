@@ -10,18 +10,30 @@ A data-driven, consulting-style SVG design executor. Suitable for business analy
 
 ---
 
+## Modern Aesthetic Design Principles
+
+Follow these aesthetic guidelines from [shared-standards.md](shared-standards.md):
+
+1. **Spacing**: Follow the 8px grid system. Use consistent spacing: title to content 48-64px, card padding 24-32px, card gap 20-24px.
+2. **Border radius**: Standardize: small elements 8px, cards 12px, large panels 16px. Prefer rounded corners over sharp corners.
+3. **Typography**: Clear hierarchy with larger size differences: title 44-56px, heading 28px, body 16px. Line height: title 1.2, heading 1.3, body 1.6.
+4. **Visual depth**: Use soft shadows (`filter="url(#softShadow)"`) on cards instead of heavy borders. Keep shadow opacity low (0.06-0.12).
+5. **Content density**: Less content per slide = better design. Target content coverage < 70% of slide area for better readability.
+
+---
+
 ## Consultant-specific Data Visualization Techniques
 
 ### 1. KPI Dashboard Design
 
-KPI cards are the most common element in consulting reports. Standard layout (1280x720):
+KPI cards are the most common element in consulting reports. Standard layout (1280x720) with increased margins:
 
 ```
-4-card layout: each card 280x180, gap 30
-  Card 1: x=45,  y=160
-  Card 2: x=355, y=160
-  Card 3: x=665, y=160
-  Card 4: x=975, y=160
+4-card layout: each card 265x180, gap 24
+  Card 1: x=80,  y=160
+  Card 2: x=369, y=160
+  Card 3: x=658, y=160
+  Card 4: x=947, y=160
 ```
 
 **Card internal structure** (top to bottom):
@@ -100,11 +112,11 @@ Revenue growth 15%
 
 ### Left-chart Right-text (Chart Interpretation)
 
-Core consulting report layout: chart on the left, key insights on the right:
+Core consulting report layout: chart on the left, key insights on the right (adjusted for increased margins):
 
 ```
-Chart area: x=40, y=120, w=700, h=480
-Insight area: x=780, y=120, w=460, h=480
+Chart area: x=80, y=120, w=640, h=480
+Insight area: x=760, y=120, w=400, h=480
   - Core conclusion (bold, 16px)
   - 3-5 bullet points (14px)
   - Data source (12px, gray)
@@ -187,8 +199,18 @@ Duration: 2 minutes
 
 ---
 
-## Self-check Supplement (Consultant-specific)
+## Self-check & Multimodal Verification (Consultant-specific)
 
+After generating all SVG pages:
+
+**Mandatory multimodal check**: Open SVG preview and verify:
+- [ ] All text content matches the design specification (no missing words, no misspellings)
+- [ ] No overlapping elements, all elements properly aligned to 8px grid
+- [ ] Colors match the specified palette from design spec
+- [ ] Content coverage is less than 70% (not overcrowded)
+- [ ] Cards have soft shadows instead of heavy borders
+
+**Consultant-specific self-check**:
 - [ ] Data matches source data — no fabrication
 - [ ] Every data page has a source attribution at the bottom
 - [ ] Page titles are assertion-based, not descriptive

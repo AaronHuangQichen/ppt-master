@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <filter id="titleGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bgGradient)"/>
+
+  <!-- Accent spots -->
+  <circle cx="150" cy="120" r="80" fill="#6366F1" fill-opacity="0.2"/>
+  <circle cx="1130" cy="600" r="100" fill="#8B5CF6" fill-opacity="0.15"/>
+
+  <!-- Title -->
+  <text x="640" y="340" text-anchor="middle" font-size="52" font-weight="bold" fill="#F8FAFC" filter="url(#titleGlow)">
+    <tspan>{{CHAPTER_TITLE}}</tspan>
+  </text>
+  <text x="640" y="390" text-anchor="middle" font-size="22" fill="#CBD5E1">
+    <tspan>{{CHAPTER_DESC}}</tspan>
+  </text>
+</svg>

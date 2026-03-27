@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+
+  <!-- Left accent stripe -->
+  <rect x="80" y="70" width="4" height="580" fill="#3B82F6"/>
+
+  <!-- Page title -->
+  <text x="112" y="130" font-size="32" font-weight="bold" fill="#111827">
+    <tspan>{{PAGE_TITLE}}</tspan>
+  </text>
+
+  <!-- Content area (Executor adds content here) -->
+  <!-- Content starts at y=170, ends at y=610 -->
+
+  <!-- Footer -->
+  <text x="112" y="650" font-size="10" fill="#9CA3AF">
+    <tspan>{{SECTION_NAME}}  ·  {{PAGE_NUM}}</tspan>
+  </text>
+</svg>

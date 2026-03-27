@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+
+  <!-- Top accent -->
+  <rect x="0" y="0" width="1280" height="4" fill="#8B0000"/>
+
+  <!-- Large chapter number (low opacity) -->
+  <text x="80" y="400" font-size="240" font-weight="bold" fill="#8B0000" fill-opacity="0.15" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{CHAPTER_NUM}}</tspan>
+  </text>
+
+  <!-- Left crimson accent stripe -->
+  <rect x="448" y="160" width="8" height="320" fill="#8B0000"/>
+
+  <!-- Chapter title -->
+  <text x="496" y="280" font-size="40" font-weight="bold" fill="#1A1A1A" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{CHAPTER_TITLE}}</tspan>
+  </text>
+
+  <!-- Chapter description -->
+  <text x="496" y="336" font-size="18" fill="#666666" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{CHAPTER_DESC}}</tspan>
+  </text>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="712" width="1280" height="4" fill="#8B0000"/>
+</svg>

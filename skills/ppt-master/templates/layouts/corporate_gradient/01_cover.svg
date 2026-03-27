@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <filter id="titleGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bgGradient)"/>
+
+  <!-- Accent gradient spot -->
+  <circle cx="1150" cy="100" r="120" fill="url(#bgGradient)" fill-opacity="0.6">
+    <stop offset="0%" stop-color="#6366F1"/>
+    <stop offset="100%" stop-color="#8B5CF6"/>
+  </circle>
+
+  <!-- Logo placeholder -->
+  <rect x="80" y="80" width="200" height="80" fill="#FFFFFF" fill-opacity="0"/>
+
+  <!-- Title -->
+  <text x="640" y="320" text-anchor="middle" font-size="56" font-weight="bold" fill="#F8FAFC" filter="url(#titleGlow)">
+    <tspan>{{TITLE}}</tspan>
+  </text>
+  <text x="640" y="370" text-anchor="middle" font-size="24" fill="#CBD5E1" filter="url(#titleGlow)">
+    <tspan>{{SUBTITLE}}</tspan>
+  </text>
+
+  <!-- Footer info -->
+  <text x="640" y="620" text-anchor="middle" font-size="16" fill="#E2E8F0">
+    <tspan>{{AUTHOR}} / {{INSTITUTION}} / {{DATE}}</tspan>
+  </text>
+</svg>

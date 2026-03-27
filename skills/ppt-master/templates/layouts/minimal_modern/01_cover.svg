@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+
+  <!-- Left accent stripe -->
+  <rect x="80" y="70" width="4" height="580" fill="#3B82F6"/>
+
+  <!-- Title area -->
+  <text x="112" y="280" font-size="56" font-weight="bold" fill="#111827">
+    <tspan>{{TITLE}}</tspan>
+  </text>
+  <text x="112" y="330" font-size="24" fill="#6B7280">
+    <tspan>{{SUBTITLE}}</tspan>
+  </text>
+
+  <!-- Footer info -->
+  <text x="112" y="630" font-size="16" fill="#4B5563">
+    <tspan>{{AUTHOR}}</tspan>
+  </text>
+  <text x="112" y="655" font-size="14" fill="#9CA3AF">
+    <tspan>{{INSTITUTION}} · {{DATE}}</tspan>
+  </text>
+
+  <!-- Logo placeholder area (bottom right) -->
+  <rect x="980" y="590" width="200" height="80" fill="#FFFFFF" fill-opacity="0"/>
+</svg>

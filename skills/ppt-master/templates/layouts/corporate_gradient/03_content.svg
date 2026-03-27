@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="topGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <filter id="softShadow" x="-15%" y="-15%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dx="0" dy="4" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.08" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Top gradient header -->
+  <rect x="0" y="0" width="1280" height="90" fill="url(#topGradient)"/>
+  <text x="90" y="55" font-size="24" font-weight="bold" fill="#FFFFFF">
+    <tspan>{{PAGE_TITLE}}</tspan>
+  </text>
+
+  <!-- Content area -->
+  <!-- Content starts at y=110, cards go here with soft shadows -->
+
+  <!-- Footer -->
+  <text x="80" y="700" font-size="10" fill="#64748B">
+    <tspan>{{SECTION_NAME}}  ·  {{PAGE_NUM}}</tspan>
+  </text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Black background -->
+  <rect width="1280" height="720" fill="#000000"/>
+
+  <!-- Chapter number block with accent background -->
+  <rect x="80" y="240" width="120" height="120" fill="{{ACCENT_COLOR}}"/>
+  <text x="140" y="326" text-anchor="middle" font-size="64" font-weight="bold" fill="#FFFFFF" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{CHAPTER_NUM}}</tspan>
+  </text>
+
+  <!-- Chapter title to the right -->
+  <text x="232" y="310" font-size="48" font-weight="bold" fill="#FFFFFF" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{CHAPTER_TITLE}}</tspan>
+  </text>
+
+  <!-- Subtle accent corner decoration -->
+  <rect x="0" y="0" width="40" height="40" fill="{{ACCENT_COLOR}}"/>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <filter id="softShadow" x="-15%" y="-15%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dx="0" dy="4" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.08" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+
+  <!-- Top accent stripe -->
+  <rect x="0" y="0" width="1280" height="8" fill="#8B0000"/>
+
+  <!-- Logo placeholder area -->
+  <rect x="80" y="40" width="200" height="64" fill="none" stroke="#E0E0E0" stroke-width="1" rx="8"/>
+  <text x="180" y="80" text-anchor="middle" font-size="14" fill="#999999" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>LOGO_PLACEHOLDER</tspan>
+  </text>
+
+  <!-- Main title -->
+  <text x="640" y="320" text-anchor="middle" font-size="56" font-weight="bold" fill="#1A1A1A" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{TITLE}}</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="640" y="392" text-anchor="middle" font-size="24" fill="#666666" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{SUBTITLE}}</tspan>
+  </text>
+
+  <!-- Bottom crimson accent line -->
+  <rect x="480" y="448" width="320" height="4" fill="#8B0000"/>
+
+  <!-- Bottom info area -->
+  <text x="640" y="560" text-anchor="middle" font-size="16" fill="#333333" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{COURSE}}</tspan>
+  </text>
+  <text x="640" y="592" text-anchor="middle" font-size="16" fill="#333333" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{AUTHOR}}  |  {{INSTRUCTOR}}</tspan>
+  </text>
+  <text x="640" y="624" text-anchor="middle" font-size="14" fill="#666666" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{INSTITUTION}}  |  {{DATE}}</tspan>
+  </text>
+
+  <!-- Bottom accent stripe -->
+  <rect x="0" y="712" width="1280" height="8" fill="#8B0000"/>
+</svg>

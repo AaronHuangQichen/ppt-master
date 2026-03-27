@@ -1,24 +1,24 @@
 {
   "meta": {
-    "total": 20,
+    "total": 25,
     "defaultViewBox": "0 0 1280 720",
     "formats": ["ppt169"],
     "standardFiles": ["design_spec.md", "01_cover.svg", "02_toc.svg", "02_chapter.svg", "03_content.svg", "04_ending.svg"],
     "standardPageTypes": ["cover", "toc", "chapter", "content", "ending"],
-    "updated": "2026-03-22"
+    "updated": "2026-03-27"
   },
   "categories": {
     "brand": {
       "label": "Brand Style Templates",
-      "layouts": ["google_style", "mckinsey", "anthropic", "中汽研_常规", "中汽研_商务", "中汽研_现代", "中国电建_常规", "中国电建_现代", "招商银行"]
+      "layouts": ["google_style", "mckinsey", "anthropic", "中汽研_常规", "中汽研_商务", "中汽研_现代", "中国电建_常规", "中国电建_现代", "招商银行", "sjtu_med_academy"]
     },
     "general": {
       "label": "General Style Templates",
-      "layouts": ["exhibit", "科技蓝商务", "smart_red"]
+      "layouts": ["exhibit", "科技蓝商务", "smart_red", "minimal_modern", "corporate_gradient"]
     },
     "scenario": {
       "label": "Scenario-Specific Templates",
-      "layouts": ["academic_defense", "psychology_attachment", "medical_university", "重庆大学"]
+      "layouts": ["academic_defense", "psychology_attachment", "medical_university", "重庆大学", "zen_minimalist"]
     },
     "government": {
       "label": "Government/Enterprise Templates",
@@ -26,22 +26,24 @@
     },
     "special": {
       "label": "Special Style Templates",
-      "layouts": ["pixel_retro"]
+      "layouts": ["pixel_retro", "monochrome_pro"]
     }
   },
   "quickLookup": {
-    "strategy": ["exhibit", "mckinsey"],
-    "board": ["exhibit", "mckinsey", "招商银行"],
-    "general_business": ["科技蓝商务", "smart_red", "exhibit"],
-    "technology": ["anthropic", "google_style", "smart_red", "ai_ops"],
+    "strategy": ["exhibit", "mckinsey", "corporate_gradient", "minimal_modern"],
+    "board": ["exhibit", "mckinsey", "招商银行", "corporate_gradient"],
+    "general_business": ["科技蓝商务", "smart_red", "exhibit", "minimal_modern", "corporate_gradient"],
+    "technology": ["anthropic", "google_style", "smart_red", "ai_ops", "minimal_modern"],
     "government": ["government_red", "government_blue", "ai_ops"],
-    "academic": ["academic_defense", "重庆大学"],
-    "medical": ["medical_university"],
-    "psychology": ["psychology_attachment"],
-    "finance": ["招商银行", "exhibit", "mckinsey"],
+    "academic": ["academic_defense", "重庆大学", "sjtu_med_academy", "zen_minimalist"],
+    "medical": ["medical_university", "sjtu_med_academy"],
+    "psychology": ["psychology_attachment", "zen_minimalist"],
+    "finance": ["招商银行", "exhibit", "mckinsey", "corporate_gradient"],
     "certification": ["中汽研_常规", "中汽研_商务", "中汽研_现代"],
     "energy": ["中国电建_常规", "中国电建_现代"],
-    "creative": ["pixel_retro", "smart_red"]
+    "creative": ["pixel_retro", "smart_red", "monochrome_pro", "zen_minimalist"],
+    "portfolio": ["monochrome_pro", "minimal_modern"],
+    "lecture": ["zen_minimalist", "minimal_modern"]
   },
   "layouts": {
     "academic_defense": {
@@ -191,6 +193,41 @@
       "themeMode": "Academic blue primary + mountain-city layered imagery",
       "assets": ["重庆大学logo.png", "重庆大学logo2.png"],
       "keywords": ["Chongqing University", "Academic", "Defense", "University"]
+    },
+    "minimal_modern": {
+      "label": "Minimal Modern Template",
+      "summary": "A clean modern minimalist template with left accent stripe for startups and tech product launches",
+      "tone": "Clean, modern, professional, spacious, contemporary",
+      "themeMode": "Light theme (white background + near-black primary + single accent)",
+      "keywords": ["Minimal", "Modern", "Startup", "Tech", "Product launch"]
+    },
+    "corporate_gradient": {
+      "label": "Corporate Gradient Template",
+      "summary": "A premium corporate template with deep navy gradients for executive reports and annual reviews",
+      "tone": "Premium, professional, authoritative, modern corporate",
+      "themeMode": "Hybrid theme (dark gradient cover/chapter + light content pages with gradient header)",
+      "keywords": ["Corporate", "Gradient", "Executive", "Annual report", "Business"]
+    },
+    "sjtu_med_academy": {
+      "label": "SJTU Medicine Academic Template",
+      "summary": "An academic template based on Shanghai Jiao Tong University School of Medicine brand color, perfect for medical course discussions and thesis defenses",
+      "tone": "Professional, clean, rigorous, academic, trustworthy",
+      "themeMode": "Light theme (white background + deep crimson primary from SJTU Medicine brand)",
+      "keywords": ["SJTU", "Medicine", "Academic", "Medical school", "Defense", "Discussion"]
+    },
+    "monochrome_pro": {
+      "label": "Monochrome Pro Template",
+      "summary": "A strict monochrome grid template with single accent for architecture portfolios and design showcases",
+      "tone": "Precise, minimalist, high-contrast, sophisticated, professional",
+      "themeMode": "Light monochrome (white + black/gray hierarchy + one custom accent)",
+      "keywords": ["Monochrome", "Portfolio", "Architecture", "Design", "Minimalist"]
+    },
+    "zen_minimalist": {
+      "label": "Zen Minimalist Template",
+      "summary": "A calm zen minimalist template with massive whitespace for academic lectures and wellness topics",
+      "tone": "Calm, serene, tranquil, spacious, low-contrast, sophisticated",
+      "themeMode": "Light theme with muted natural accent and extreme negative space",
+      "keywords": ["Zen", "Minimalist", "Lecture", "Wellness", "Calm", "Spacious"]
     }
   }
 }

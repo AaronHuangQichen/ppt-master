@@ -40,14 +40,31 @@ Must output confirmation including: canvas dimensions, body font size, color sch
 
 ---
 
-## 3. Execution Guidelines
+## 3. Modern Aesthetic Design Principles
 
-- **Proximity principle**: Place related elements close together to form visual groups; increase spacing between unrelated groups to reinforce logical structure
+Follow these core aesthetic principles for professional results (see [shared-standards.md](shared-standards.md) for complete standards):
+
+1. **Proximity**: Group related content together; put more space between unrelated groups
+2. **Contrast**: Create clear differences between title/heading/body text through size, weight, and color
+3. **Repetition**: Repeat colors, fonts, and spacing consistently throughout the presentation
+4. **Alignment**: Align every element to the 8px grid; no "floating" elements off the grid
+5. **White space**: Less content per slide = better aesthetics. Target content coverage < 70% of slide area
+6. **Visual depth**: Use soft shadows on cards instead of heavy borders; use gradients for subtle interest
+7. **Consistent rounding**: Use standard border radius: small 8px, medium 12px, large 16px
+
+## 4. Execution Guidelines
+
 - **Absolute spec adherence**: Strictly follow the color, layout, canvas format, and typography parameters in the spec
 - **Follow template structure**: If templates exist, inherit the template's visual framework
 - **Phased batch generation** (recommended):
   1. **Visual Construction Phase**: Generate all SVG pages continuously, ensuring high consistency in design style and layout coordinates (Visual Consistency)
-  2. **Logic Construction Phase**: After all SVGs are finalized, batch-generate speaker notes to ensure narrative coherence (Narrative Continuity)
+  2. **Multimodal Quality Check Phase**: **After all SVGs are generated**, use multimodal recognition to verify:
+     - All text content matches the design specification
+     - No overlapping elements
+     - Colors match the specified palette
+     - Layout follows spacing and alignment standards
+     - Fix any issues found before proceeding
+  3. **Logic Construction Phase**: After all SVGs are checked and fixed, batch-generate speaker notes to ensure narrative coherence (Narrative Continuity)
 - **Technical specifications**: See [shared-standards.md](shared-standards.md) for SVG technical constraints and PPT compatibility rules
 
 ### SVG File Naming Convention
@@ -61,7 +78,7 @@ File naming format: `<number>_<page_name>.svg`
 
 ---
 
-## 4. Icon Usage
+## 5. Icon Usage
 
 Four approaches: **A: Emoji** (`<text>🚀</text>`) | **B: AI-generated** (SVG basic shapes) | **C: Built-in library** (`templates/icons/` 640+ icons, recommended) | **D: Custom** (user-specified)
 
@@ -81,7 +98,7 @@ Full index: `templates/icons/README.md`
 
 ---
 
-## 5. Chart Reference
+## 6. Chart Reference
 
 When the Design Spec includes a **VII. Chart Reference List**, read the referenced SVG templates from `templates/charts/` to understand common chart patterns.
 
@@ -95,7 +112,7 @@ When the Design Spec includes a **VII. Chart Reference List**, read the referenc
 
 ---
 
-## 6. Image Handling
+## 7. Image Handling
 
 Handle images based on their status in the Design Specification's "Image Resource List":
 
@@ -111,7 +128,7 @@ Handle images based on their status in the Design Specification's "Image Resourc
 
 ---
 
-## 7. Font Usage
+## 8. Font Usage
 
 Apply corresponding fonts for different text roles based on the font plan in the Design Specification & Content Outline:
 
@@ -124,7 +141,7 @@ Apply corresponding fonts for different text roles based on the font plan in the
 
 ---
 
-## 8. Speaker Notes Generation Framework
+## 9. Speaker Notes Generation Framework
 
 ### Task 1. Generate Complete Speaker Notes Document
 
@@ -160,7 +177,7 @@ Automatically split `notes/total.md` into individual speaker note files in the `
 
 ---
 
-## 9. Next Steps After Completion
+## 10. Next Steps After Completion
 
 > **Auto-continuation**: After Visual Construction Phase (all SVG pages) and Logic Construction Phase (all notes) are complete, the Executor proceeds directly to the post-processing pipeline.
 

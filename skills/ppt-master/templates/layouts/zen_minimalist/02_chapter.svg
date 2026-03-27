@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Accent muted background -->
+  <rect width="1280" height="720" fill="{{ACCENT_COLOR}}" fill-opacity="0.85"/>
+
+  <!-- Large chapter number low opacity -->
+  <text x="640" y="280" text-anchor="middle" font-size="120" font-weight="light" fill="#FFFFFF" fill-opacity="0.35" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{CHAPTER_NUM}}</tspan>
+  </text>
+
+  <!-- Chapter title centered -->
+  <text x="640" y="380" text-anchor="middle" font-size="40" font-weight="normal" fill="#FFFFFF" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{CHAPTER_TITLE}}</tspan>
+  </text>
+</svg>

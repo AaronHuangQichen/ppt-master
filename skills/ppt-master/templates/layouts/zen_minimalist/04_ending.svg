@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+
+  <!-- Top-left accent circle -->
+  <circle cx="160" cy="160" r="48" fill="{{ACCENT_COLOR}}" fill-opacity="0.12"/>
+
+  <!-- Main Thank You centered -->
+  <text x="640" y="320" text-anchor="middle" font-size="64" font-weight="300" fill="#4a4a48" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{THANK_YOU}}</tspan>
+  </text>
+
+  <!-- Subtle accent line -->
+  <rect x="544" y="360" width="192" height="2" fill="{{ACCENT_COLOR}}" fill-opacity="0.25"/>
+
+  <!-- Contact info -->
+  <text x="640" y="420" text-anchor="middle" font-size="16" font-weight="300" fill="#6c757d" font-family="SF Pro Display, PingFang SC, Microsoft YaHei, sans-serif">
+    <tspan>{{CONTACT}}</tspan>
+  </text>
+
+  <!-- Bottom-right accent circle -->
+  <circle cx="1120" cy="560" r="40" fill="{{ACCENT_COLOR}}" fill-opacity="0.12"/>
+</svg>

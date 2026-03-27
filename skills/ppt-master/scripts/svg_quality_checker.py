@@ -89,6 +89,15 @@ class SVGQualityChecker:
             # 5. Check text wrapping methods
             self._check_text_elements(content, result)
 
+            # 6. Check 8px grid alignment
+            self._check_8px_grid(content, result)
+
+            # 7. Check content coverage
+            self._check_content_coverage(content, result, expected_format)
+
+            # 8. Check shadow usage on cards
+            self._check_shadow_usage(content, result)
+
             # Determine pass/fail
             result['passed'] = len(result['errors']) == 0
 
@@ -268,6 +277,77 @@ class SVGQualityChecker:
                 f"Detected {len(text_matches)} potentially overly long single-line text(s) (consider using tspan for wrapping)"
             )
 
+    def _check_8px_grid(self, content: str, result: Dict):
+        """Check that all coordinates and dimensions are multiples of 8 for consistent alignment"""
+        # Find all numeric values in x/y/width/height/rx/ry attributes
+        coord_pattern = r'(x|y|width|height|rx|ry)\s*=\s*"([0-9]+)'
+        matches = re.findall(coord_pattern, content)
+
+        non_grid_count = 0
+        for attr, value_str in matches:
+            try:
+                value = int(float(value_str))
+                if value % 8 != 0:
+                    non_grid_count += 1
+            except ValueError:
+                pass
+
+        if non_grid_count > 3:  # Allow  tolerate a few exceptions
+            result['warnings'].append(
+                f"Found {non_grid_count} coordinates/dimensions that are not multiples of 8. "
+                f"Using 8px grid improves visual alignment consistency."
+            )
+
+    def _check_content_coverage(self, content: str, result: Dict, expected_format: str = None):
+        """Estimate content coverage and warn if too much content fills the slide"""
+        # Get canvas dimensions from viewBox
+        viewbox_match = re.search(r'viewBox="0 0 (\d+) (\d+)"', content)
+        if not viewbox_match:
+            return
+
+        canvas_width = int(viewbox_match.group(1))
+        canvas_height = int(viewbox_match.group(2))
+        canvas_area = canvas_width * canvas_height
+
+        # Very rough estimation: count all non-background rectangles/paths/circles as content
+        # This is just a heuristic to detect overcrowding
+        element_count = 0
+        element_count += len(re.findall(r'<rect\s', content))
+        element_count += len(re.findall(r'<path\s', content))
+        element_count += len(re.findall(r'<circle\s', content))
+        element_count += len(re.findall(r'<ellipse\s', content))
+        element_count += len(re.findall(r'<polygon\s', content))
+
+        # If many elements likely means overcrowding
+        if element_count > 15:
+            result['warnings'].append(
+                f"High element count ({element_count} elements) - slide may be overcrowded. "
+                f"Consider reducing content per slide for better aesthetics. Target content coverage < 70%."
+            )
+
+    def _check_shadow_usage(self, content: str, result: Dict):
+        """Check that cards/rectangles use shadows for depth"""
+        # Count rectangles that look like cards (width > 200px)
+        rects = re.findall(r'<rect[^>]+width="([0-9]+)', content)
+        card_count = 0
+        has_filter_count = 0
+
+        for match in re.finditer(r'<rect\s[^>]+', content):
+            width_match = re.search(r'width="([0-9]+)', match.group(0))
+            if width_match:
+                width = int(width_match.group(1))
+                if width > 200:  # This is likely a card
+                    card_count += 1
+                    if 'filter=' in match.group(0):
+                        has_filter_count += 1
+
+        # If there are cards but none have shadows (filters), recommend adding shadows
+        if card_count > 0 and has_filter_count == 0:
+            result['warnings'].append(
+                f"Found {card_count} card(s) without soft shadows. "
+                f"Consider using soft shadows instead of borders for better visual depth."
+            )
+
     def _categorize_issue(self, error_msg: str) -> str:
         """Categorize issue type"""
         if 'viewBox' in error_msg:
@@ -379,6 +459,9 @@ class SVGQualityChecker:
             print(f"  1. viewBox issues: Ensure consistency with canvas format (see references/canvas-formats.md)")
             print(f"  2. foreignObject: Use <text> + <tspan> for manual line breaks")
             print(f"  3. Font issues: Use system UI font stack")
+            print(f"  4. 8px grid: Align all elements to 8px grid for better visual consistency")
+            print(f"  5. Overcrowding: Reduce content per slide, increase white space for better readability")
+            print(f"  6. Shadow usage: Use soft shadow filters on cards for better visual depth")
 
     def _percentage(self, count: int) -> int:
         """Calculate percentage"""

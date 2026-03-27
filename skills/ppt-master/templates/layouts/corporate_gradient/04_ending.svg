@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <filter id="titleGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bgGradient)"/>
+
+  <text x="640" y="320" text-anchor="middle" font-size="56" font-weight="bold" fill="#F8FAFC" filter="url(#titleGlow)">
+    <tspan>{{THANK_YOU}}</tspan>
+  </text>
+  <text x="640" y="370" text-anchor="middle" font-size="20" fill="#CBD5E1">
+    <tspan>{{TAGLINE}}</tspan>
+  </text>
+
+  <!-- Contact info card -->
+  <rect x="400" y="450" width="480" height="120" rx="16" fill="#FFFFFF" filter="url(#softShadow)"/>
+  <defs>
+    <filter id="softShadow" x="-15%" y="-15%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dx="0" dy="4" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.08" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <text x="640" y="515" text-anchor="middle" font-size="16" fill="#334155">
+    <tspan>{{CONTACT_INFO}}</tspan>
+  </text>
+</svg>
